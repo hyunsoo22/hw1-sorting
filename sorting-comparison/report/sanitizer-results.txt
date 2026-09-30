@@ -1,0 +1,48 @@
+gcc -std=c17 -Wall -Wextra -g -O1 -fsanitize=address,undefined -Isrc -o tests/sanitize.out tests/test_sort.c src/bench.c src/sort.c src/insertionSort.c src/mergeSort.c src/heapSort.c
+./tests/sanitize.out
+PASS insertionSort  mixed and negative
+PASS insertionSort  sorted
+PASS insertionSort  reversed
+PASS insertionSort  duplicate keys
+PASS insertionSort  all equal
+PASS insertionSort  one record
+PASS insertionSort  empty array
+PASS insertionSort  integer extremes
+PASS insertionSort  sizes 0..512, tagged permutation and stable guarantees
+PASS insertionSort  exhaustive 3,280 short arrays
+PASS insertionSort  duplicate-key witness
+WITNESS insertionSort: (1,2) (2,0) (2,1)
+PASS insertionSort  counters and heap allocation
+PASS insertionSort  benchmark correctness
+PASS mergeSort      mixed and negative
+PASS mergeSort      sorted
+PASS mergeSort      reversed
+PASS mergeSort      duplicate keys
+PASS mergeSort      all equal
+PASS mergeSort      one record
+PASS mergeSort      empty array
+PASS mergeSort      integer extremes
+PASS mergeSort      sizes 0..512, tagged permutation and stable guarantees
+PASS mergeSort      exhaustive 3,280 short arrays
+PASS mergeSort      duplicate-key witness
+WITNESS mergeSort: (1,2) (2,0) (2,1)
+PASS mergeSort      counters and heap allocation
+PASS mergeSort      benchmark correctness
+PASS heapSort       mixed and negative
+PASS heapSort       sorted
+PASS heapSort       reversed
+PASS heapSort       duplicate keys
+PASS heapSort       all equal
+PASS heapSort       one record
+PASS heapSort       empty array
+PASS heapSort       integer extremes
+PASS heapSort       sizes 0..512, tagged permutation and stable guarantees
+PASS heapSort       exhaustive 3,280 short arrays
+PASS heapSort       duplicate-key witness
+WITNESS heapSort: (1,2) (2,1) (2,0)
+PASS heapSort       counters and heap allocation
+PASS heapSort       benchmark correctness
+PASS detector       stable sample
+PASS detector       stability violation
+PASS detector       unsorted sample
+42 checks, 0 failures

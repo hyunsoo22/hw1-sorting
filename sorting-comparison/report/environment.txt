@@ -1,0 +1,10 @@
+Execution date: 2026-09-30 Asia/Seoul
+OS: Linux x86_64 container
+CPU: AMD EPYC 9V74 80-Core Processor
+Compiler: GCC 13.3.0
+Flags: -std=c17 -Wall -Wextra -Wpedantic -O2
+Clock: clock() CPU time
+Seed: 20260930
+Repetitions: 11 per condition; median reported
+Measured record size: 8 bytes
+LeakSanitizer disabled due to process access restriction; ASan/UBSan enabled
